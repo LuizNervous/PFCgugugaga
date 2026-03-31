@@ -1,6 +1,0 @@
-loaded_h_0(function(_){var window=this;
-_.v("a7QTqd");
-_.Zf(_.r4a,class extends _.fo{static Ta(){return{service:{j7a:_.Ocq}}}constructor(a){super();this.j7a=a.service.j7a}getExpanderModel(a){return this.j7a.getExpanderModel(a)}getAimOverlayModel(a){return this.j7a.getAimOverlayModel(a)}});
-_.w();
-});
-// Google Inc.
