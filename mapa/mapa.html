@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa com Filtros</title>
+
+    <link rel="stylesheet" href="mapa.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h3>Assis Chateaubriand</h3>
+        <p>Paraná, Brasil</p>
+    </div>
+
+    <ul class="topicos">
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="#">Guia de serviços</a></li>
+        <li><a href="#">História</a></li>
+    </ul>
+
+    <div id="menu">Menu</div>
+</header>
+
+ <div class="info">
+
+   <a href="/index.html"><strong>⏪Voltar</strong></a> <br>
+    <h1>Explore o Mapa</h1> <br>
+    <p>Descubra todos os pontos de interesse da cidade</p>
+
+ </div>
+
+  <br><br>
+<main>
+    <div class="container-mapa">
+        
+        <div class="painel-filtros">
+            <h3>Filtros</h3>
+            <hr>
+            <button class="btn-filtro ativo" data-categoria="mobilidade">🚌 Mobilidade</button>
+            <button class="btn-filtro" data-categoria="turismo">📸 Turismo</button>
+             <button class="btn-filtro" data-categoria="turismo">⛩ Praças</button>
+            <button class="btn-filtro" data-categoria="gastronomia">🍴 Gastronomia</button>
+            <button class="btn-filtro" data-categoria="postos">⛽ Postos</button>
+            <button class="btn-filtro" data-categoria="postos">🔵 Farmacias</button>
+            <button class="btn-filtro" data-categoria="postos">🔵 Postos de Saúde</button>
+            <button class="btn-filtro" data-categoria="postos">➕ Hospitais</button>
+        </div>
+
+        <div id="mapa"></div>
+
+    </div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="mapa.js"></script>
+
+</body>
+</html>
