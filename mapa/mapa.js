@@ -20,7 +20,7 @@ L.marker([-24.406691, -53.514187]).bindPopup("<b>Praça dos Trabalhadores</b>").
 L.marker([-24.4068551, -53.5205348]).bindPopup("<b>Horto Florestal</b>").addTo(grupoTurismo);
 L.marker([-24.414238, -53.518487]).bindPopup("<b>Praça Paris</b>").addTo(grupoTurismo);
 L.marker([-24.403970, -53.509547]).bindPopup("<b>Teatro Municipal</b>").addTo(grupoTurismo);
-L.marker([-24.397700, -53.511709]).bindPopup("<b>Praça que eu e bruno fica depois do rodizio labella</b>").addTo(grupoTurismo);
+L.marker([-24.397700, -53.511709]).bindPopup("<b>Praça das Américas</b>").addTo(grupoTurismo);
 L.marker([-24.391224, -53.514691]).bindPopup("<b>Ginásio de Esportes Tancredo Neves</b>").addTo(grupoTurismo);
 L.marker([-24.407695, -53.533094]).bindPopup("<b>Centro de Evenetos</b>").addTo(grupoTurismo);
 L.marker([-24.397934, -53.502696]).bindPopup("<b>Praça do Panorama</b>").addTo(grupoTurismo);
