@@ -10,7 +10,9 @@ const grupoMobilidade = L.layerGroup();
 const grupoTurismo = L.layerGroup();
 const grupoGastronomia = L.layerGroup();
 const grupoPostos = L.layerGroup();
-
+const grupoHospitais = L.layerGroup();
+const grupoPostosSaude=L.layerGroup();
+const grupoFarmacia = L.layerGroup();
 //paradas de onibus
 L.marker([-24.404883, -53.516982]).bindPopup("<b>Rodoviária</b>").addTo(grupoMobilidade);
 L.marker([-24.4200, -53.5180]).bindPopup("<b>Ponto Teste</b>").addTo(grupoMobilidade);
@@ -41,7 +43,10 @@ const todasCategorias = {
     "mobilidade": grupoMobilidade,
     "turismo": grupoTurismo,
     "gastronomia": grupoGastronomia,
-    "postos": grupoPostos
+    "postos": grupoPostos,
+    "hospitais":grupoHospitais,
+    "postossaude":grupoPostosSaude,
+    "farmacias":grupoFarmacia
 };
 
 
