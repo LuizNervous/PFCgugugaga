@@ -49,6 +49,8 @@ main{
     flex-direction: column;
     margin: 20px;
     flex: 1;
+    gap: 3vw;
+    text-align: center;
 }
 
 .introducao {
@@ -72,9 +74,45 @@ main{
 height: 50vh;
 }
 
+div{
+    border: 1px solid red;
+}
 
+.blocos-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    gap: 1vh;
+    align-items: center;
+    justify-items: center;
+}
 
+.blocos-home .bloco{
+    height: auto;
+     background-color: #007bff;
+     width: 40vh;
+     height: 15vh;
+     border-radius: 20%;
+}
 
+.blocos-home img{
+    width: 20%;
+}
+
+.botao button{
+    background: linear-gradient(to right, #007bff , #4dff62 );
+    width: 15vh;
+    padding: 10px;
+    border-radius: 10%;
+    color: white;
+    border: 1px solid black;
+}
+
+.botao{
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+}
 
 
 footer{
