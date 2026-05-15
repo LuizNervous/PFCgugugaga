@@ -15,11 +15,12 @@ body {
 header {
     background-color: rgb(255, 255, 255);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
     border-bottom: 0.5px solid black;
-    height: 80px;
+    height: auto;
 }
 
 .topicos {
@@ -45,7 +46,6 @@ header {
     height: auto;
     gap: 10px;
     color: aliceblue;
-
 }
 
  a {
@@ -59,18 +59,30 @@ header {
     width: 100%;
     max-width: 1200px;
     height: 600px;
-    margin: auto;
+    padding:0 15px ;
+    margin: 20px auto;
 }
 
 .painel-filtros {
     background: white;
-    padding: 20px;
+    padding: 20px; 
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     width: 250px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+@media (max-width:600px) {
+    .container-mapa{
+        flex-direction: column;
+        height: auto;
+    }
+    .painel-filtros{
+        width: 100%;
+        flex-direction: row;
+            flex-wrap: wrap;
+    }
 }
 
 .painel-filtros h3 {
@@ -109,4 +121,5 @@ header {
     flex-grow: 1; 
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: 400px;
 }
