@@ -53,8 +53,8 @@ async function carregarPontos() {
             divs.innerHTML+=`
              <div class="ponto-card">
                 <div class="introducao">
-                    <img src="${ponto.imagem}">
-                    <div>
+                    <img src="../imagens/pontos/${ponto.imagem}">
+                    <div class="descricao">
                     <h3>${ponto.nome}</h3>
                     <p><strong>Endereço : </strong>${ponto.endereco}</p>
                     <p>${ponto.descricao}</p>
