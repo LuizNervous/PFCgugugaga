@@ -23,34 +23,39 @@ const todasCategorias = {
     "posto de saúde": grupoPostosSaude,
     "farmacia": grupoFarmacia
 };
-grupoMobilidade.addTo(meuMapa)
+
+let dadosDosPontos = [];
 
 async function carregarPontos() {
     try {
-        const resposta = await fetch("http://localhost:3000/api/pontos");
-        const pontos = await resposta.json();
+        const resposta = await fetch("https://guia-assis.onrender.com/api/pontos");
+        dadosDosPontos = await resposta.json();
 
-        const divs=document.getElementById("informacoes");
-            divs.innerHTML='';
-
-        pontos.forEach(ponto => {
-
+        dadosDosPontos.forEach(ponto => {
             const pino = L.marker([ponto.latitude, ponto.longitude]).bindPopup(`<b>${ponto.nome}</b>`);
-
             const grupoCategoria = ponto.categoria_nome.toLowerCase();
 
             if (todasCategorias[grupoCategoria]) {
                 pino.addTo(todasCategorias[grupoCategoria]);
-            } else {
-                console.warn(`categoria não encontrada ${grupoCategoria}`);
             }
+        });
+        rederizarCards('mobilidade');
 
-      
-            const googleGPS = `https://www.google.com/maps/dir/?api=1&destination=${ponto.latitude},${ponto.longitude}`;
-            const wazeGPS = `https://waze.com/ul?ll=${ponto.latitude},${ponto.longitude}&navigate=yes`;
+    } catch (erro) {
+        console.error("Erro ao carregar os dados do mapa:", erro);
+    }
+}
+function rederizarCards(categoria) {
+    const divs = document.getElementById("informacoes");
+    divs.innerHTML = '';
 
-            
-            divs.innerHTML+=`
+    const pontosFiltrados = dadosDosPontos.filter(ponto => ponto.categoria_nome.toLowerCase() === categoriaClicada)
+
+    pontosFiltrados.forEach(ponto => {
+        const googleGPS = `https://www.google.com/maps/dir/?api=1&destination=${ponto.latitude},${ponto.longitude}`;
+        const wazeGPS = `https://waze.com/ul?ll=${ponto.latitude},${ponto.longitude}&navigate=yes`;
+
+        divs.innerHTML += `
              <div class="ponto-card">
                 <div class="introducao">
                     <img src="../imagens/pontos/${ponto.imagem}">
@@ -64,14 +69,9 @@ async function carregarPontos() {
                     <a href="${googleGPS}"  target="_blank" ><button id="maps">Abrir no Google Maps</button></a>
                     <a href="${wazeGPS}"  target="_blank" ><button id="waze">Abrir no Waze</button></a>
                 </div>
-             </div>
-            `
-        })
-    }
-    catch (erro) {
-        console.error("Erro ao carregar os dados do mapa:", erro);
-    }
-}
+             </div>`
+    });
+};
 
 const botoes = document.querySelectorAll('.btn-filtro');
 botoes.forEach(function (botao) {
@@ -86,8 +86,12 @@ botoes.forEach(function (botao) {
         }
 
         var categoriaClicada = this.getAttribute('data-categoria');
+        
+        if (todasCategorias[categoriaClicada]) {
+            todasCategorias[categoriaClicada].addTo(meuMapa);
+        }
 
-        todasCategorias[categoriaClicada].addTo(meuMapa);
+        rederizarCards(categoriaClicada);
     });
 });
 carregarPontos();
