@@ -1,8 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 
 body {
@@ -74,9 +73,6 @@ main{
 height: 50vh;
 }
 
-div{
-    border: 1px solid red;
-}
 
 .blocos-home{
     display: grid;
@@ -103,9 +99,9 @@ div{
     background: linear-gradient(to right, #007bff , #4dff62 );
     width: 15vh;
     padding: 10px;
-    border-radius: 10%;
+    border-radius: 10px;
     color: white;
-    border: 1px solid black;
+    border: none;
 }
 
 .botao{
@@ -125,4 +121,15 @@ footer{
 footer h3{
     text-transform: uppercase;
     color: #00d4ff
+}
+.linksFast{
+    display: flex;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    list-style: none;
+    outline-style: none ;
+}
+.linksFast a{
+   color: #ffffff;
+
 }

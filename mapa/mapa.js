@@ -39,6 +39,7 @@ async function carregarPontos() {
                 pino.addTo(todasCategorias[grupoCategoria]);
             }
         });
+        todasCategorias['mobilidade'].addTo(meuMapa);
         rederizarCards('mobilidade');
 
     } catch (erro) {
@@ -49,7 +50,7 @@ function rederizarCards(categoria) {
     const divs = document.getElementById("informacoes");
     divs.innerHTML = '';
 
-    const pontosFiltrados = dadosDosPontos.filter(ponto => ponto.categoria_nome.toLowerCase() === categoriaClicada)
+    const pontosFiltrados = dadosDosPontos.filter(ponto => ponto.categoria_nome.toLowerCase() === categoria)
 
     pontosFiltrados.forEach(ponto => {
         const googleGPS = `https://www.google.com/maps/dir/?api=1&destination=${ponto.latitude},${ponto.longitude}`;
