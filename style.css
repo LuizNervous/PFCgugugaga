@@ -19,12 +19,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 20px 40px;
     border-bottom: .001px solid black;
     transition: all 0.3s;
 }
 
-header img {
+header #settings {
 cursor: pointer;
     width: 30px;
 }
@@ -34,17 +34,24 @@ header a {
     color: black; 
     transition: color 0.3s;
 }
+.imglado{
+    display: flex;
+    gap: 3px;
+}
+.imglado img {
+    width: 10%;
+}
 
 .topicos {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-
+display: flex;
+gap: 25px;
+list-style: none;
+font-size:105%;
 }
 
 .topicos a:hover {
     cursor: pointer;
-    color: rgb(133, 136, 136);
+    color: rgb(39, 151, 248); 
 }
 
 
@@ -90,7 +97,7 @@ main {
 
 .blocos-home .bloco {
     height: auto;
-    background-color: #007bff;
+    background-color: #8d8d8d;
     width: 40vh;
     height: 15vh;
     border-radius: 20px;
@@ -100,19 +107,24 @@ main {
     width: 20%;
 }
 
-.botao button {
-    background: linear-gradient(to right, #007bff, #4dff62);
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    border: none;
-}
-
 .botao {
     margin-bottom: 4vh;
     display: flex;
     justify-content: center;
+}
+.botao button {
+    background: linear-gradient(to right, #007bff, #4dff62);
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    transition: all 0.3s;
+}
+.botao button:hover{
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgb(39, 151, 248);
 
 }
 
@@ -148,12 +160,15 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
     padding: 19px;
+    outline: none;
+    border-color: #289eff;
     border-radius: 10px;
 }
 
 .digitacao button {
     background-color: #0044ff;
         font-size: large;
+        border: none;
     padding: 10px;
     border-radius: 10px;
     transition: all 0.3s;
@@ -161,9 +176,8 @@ main {
 }
 
 .digitacao button:hover {
-    transform: translateY(-2px);
+    cursor: pointer;
     box-shadow: 0 6px 12px rgb(39, 151, 248);
-
 }
 
 .digitacao button:active {
@@ -199,5 +213,15 @@ footer h3 {
 }
 
 .linksFast a:hover {
-    color: #00f7ff;
+    color: #73bafd;
+}
+@media (max-width:600px) {
+    header{
+        flex-wrap: wrap;
+        padding: 15px;
+        gap: 8px;
+    }
+    .topicos{
+         position: relative;
+    }
 }
