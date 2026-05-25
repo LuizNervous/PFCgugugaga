@@ -24,7 +24,7 @@ header {
     transition: all 0.3s;
 }
 
-header #settings {
+header #botaoMenu {
 cursor: pointer;
     width: 30px;
 }
@@ -210,6 +210,12 @@ footer h3 {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s;
+}
+.escondido{
+    display: none;
+}
+.escondido.aberto{
+    display: block;
 }
 
 .linksFast a:hover {
