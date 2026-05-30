@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Serviços</title>
+
+    <link rel="stylesheet" href="serviços.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <h3>Assis Chateaubriand</h3>
+            <p>Paraná, Brasil</p>
+        </div>
+
+        <ul class="topicos">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="service.html">Guia de Serviços</a></li>
+            <li><a href="historia.html">História</a></li>
+        </ul>
+
+        <div class="config">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+    </header>
+
+    <!-- BANNER VERDE -->
+
+    <section class="info">
+
+        <a href="/index.html">voltar</a>
+
+        <h1>Serviços</h1>
+
+        <p>Tudo o que você precisa saber sobre os serviços da cidade</p>
+
+    </section>
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <section class="titulo">
+
+            <h2>Guia Completo de Serviços</h2>
+
+            <p>Encontre tudo o que você precisa na cidade</p>
+
+            <input type="text" placeholder="Buscar serviços..." class="pesquisa">
+
+        </section>
+
+        <!-- FILTROS -->
+
+        <section class="filtros">
+
+            <button class="ativo">Todos</button>
+            <button>Indústria</button>
+            <button>Comércio</button>
+            <button>Alimentação</button>
+            <button>Educação</button>
+            <button>Saúde</button>
+            <button>Hospedagem</button>
+            <button>Emprego</button>
+            <button>Moradia</button>
+
+        </section>
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-top azul">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Frimesa - Frigorífico</h3>
+
+                    <p>
+                        Maior frigorífico da cidade.
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-top rosa">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Sleep Hotel Assis</h3>
+
+                    <p>
+                        Hospedagem confortável e moderna.
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-top laranja">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Restaurante Cheiro Verde</h3>
+
+                    <p>
+                        A comida mais barata do Brasil!!!
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-top vermelho">
+                    <i class="fa-solid fa-hospital"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Hospital São Lucas</h3>
+
+                    <p>
+                        Atendimento médico da cidade.
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-top roxo">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Colégio Estadual</h3>
+
+                    <p>
+                        Educação pública de qualidade.
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-top verde">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+                <div class="card-body">
+                    <h3>Supermercado Cavale</h3>
+
+                    <p>
+                        Tudo para o seu dia a dia.
+                    </p>
+
+                    <button onclick="abrirModal()">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-top">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+
+            <div class="modal-body">
+
+                <span class="fechar" onclick="fecharModal()">
+                    ×
+                </span>
+
+                <h2>Restaurante Cheiro Verde</h2>
+
+                <p>
+                    A comida mais barata do Brasil!!!
+                </p>
+
+                <div class="info-box">
+
+                    <p><strong>📍 Endereço:</strong> Av. Getúlio Vargas, 780</p>
+
+                    <p><strong>📞 Telefone:</strong> (44) 3528-3100</p>
+
+                    <p><strong>🕒 Horário:</strong> Terça a Domingo - 18:00 às 23:30</p>
+
+                </div>
+
+                <button class="btn-mapa">
+                    Ver no Mapa
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/serviços/serviços.js">
+    </script>
+
+</body>
+
+</html>
