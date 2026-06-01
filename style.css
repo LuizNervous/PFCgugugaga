@@ -25,33 +25,35 @@ header {
 }
 
 header #botaoMenu {
-cursor: pointer;
+    cursor: pointer;
     width: 30px;
 }
 
 header a {
     text-decoration: none;
-    color: black; 
+    color: black;
     transition: color 0.3s;
 }
-.imglado{
+
+.imglado {
     display: flex;
     gap: 3px;
 }
+
 .imglado img {
     width: 10%;
 }
 
 .topicos {
-display: flex;
-gap: 25px;
-list-style: none;
-font-size:105%;
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    font-size: 105%;
 }
 
 .topicos a:hover {
     cursor: pointer;
-    color: rgb(39, 151, 248); 
+    color: rgb(39, 151, 248);
 }
 
 
@@ -112,6 +114,7 @@ main {
     display: flex;
     justify-content: center;
 }
+
 .botao button {
     background: linear-gradient(to right, #007bff, #4dff62);
     width: 100%;
@@ -122,22 +125,33 @@ main {
     border: none;
     transition: all 0.3s;
 }
-.botao button:hover{
+
+.botao button:hover {
     cursor: pointer;
     box-shadow: 0 6px 12px rgb(39, 151, 248);
 
 }
 
 #chatbot {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 500px;
-width: 70%;
-    gap: 2vh;
+    width: 70%;
+    height: 600px;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.pergunte  {
+
+#chatbot iframe,
+.pergunte iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    pointer-events: auto;
+}
+
+.pergunte {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,8 +178,8 @@ width: 70%;
 
 .digitacao button {
     background-color: #0044ff;
-        font-size: large;
-        border: none;
+    font-size: large;
+    border: none;
     padding: 10px;
     border-radius: 10px;
     transition: all 0.3s;
@@ -183,11 +197,23 @@ width: 70%;
 
 
 footer {
-    padding: 20px;
+    padding: 30px;
     color: white;
     background-color: #1a2a3a;
     display: flex;
     justify-content: space-around;
+    margin-top: 30px;
+}
+
+footer .name-time a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+footer .name-time a:hover {
+    text-decoration: none;
+    color: rgb(69, 127, 235);
 }
 
 footer h3 {
@@ -208,23 +234,27 @@ footer h3 {
     text-decoration: none;
     transition: color 0.3s;
 }
-.escondido{
+
+.escondido {
     display: none;
 }
-.escondido.aberto{
+
+.escondido.aberto {
     display: block;
 }
 
 .linksFast a:hover {
-    color: #73bafd;
+    color: rgb(69, 127, 235);
 }
+
 @media (max-width:600px) {
-    header{
+    header {
         flex-wrap: wrap;
         padding: 15px;
         gap: 8px;
     }
-    .topicos{
-         position: relative;
+
+    .topicos {
+        position: relative;
     }
 }
