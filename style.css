@@ -128,22 +128,19 @@ main {
 
 }
 
-.pergunte {
+#chatbot {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 500px;
+width: 70%;
     gap: 2vh;
 }
 
-.pergunte .chatbot {
-    height: auto;
-    background-color: #fafafa;
+.pergunte  {
     display: flex;
-    align-items: end;
-    width: 70%;
-    height: 70vh;
-    border-radius: 20px;
-    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
 }
 
 .digitacao {
