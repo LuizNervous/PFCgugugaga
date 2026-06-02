@@ -35,6 +35,8 @@ header a {
     transition: color 0.3s;
 }
 
+
+
 .imglado {
     display: flex;
     gap: 3px;
@@ -89,24 +91,23 @@ main {
 
 
 .blocos-home {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-    gap: 1vh;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 5%;
 }
 
 .blocos-home .bloco {
-    height: auto;
-    background-color: #8d8d8d;
-    width: 40vh;
-    height: 15vh;
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebebeb;
     border-radius: 20px;
-}
-
-.blocos-home img {
-    width: 20%;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.274);
 }
 
 .botao {
@@ -115,6 +116,9 @@ main {
     justify-content: center;
 }
 
+img{
+    width: 20%;
+}
 .botao button {
     background: linear-gradient(to right, #007bff, #4dff62);
     width: 100%;
@@ -201,8 +205,16 @@ footer {
     color: white;
     background-color: #1a2a3a;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     justify-content: space-around;
     margin-top: 30px;
+}
+footer .name-time {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 footer .name-time a {
@@ -222,6 +234,7 @@ footer h3 {
 }
 
 .linksFast {
+        gap: 5px;
     display: flex;
     color: rgb(255, 255, 255);
     flex-direction: column;
