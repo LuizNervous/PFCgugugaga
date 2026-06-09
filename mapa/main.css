@@ -70,7 +70,7 @@ header {
     background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
     padding: 40px 5%;
     width: 100%;
-    margin: 30px auto 10px;
+    margin-bottom: 10px;
     color: white;
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
